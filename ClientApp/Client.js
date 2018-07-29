@@ -1,10 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Hello from './Hello';
-
-console.log(document.getElementById("root"));
+import FullPage from "./Components/common/FullPage";
 
 ReactDOM.render(
-    <Hello name="World!" />,
+    <FullPage />,
     document.getElementById("root")
 );
