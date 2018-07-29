@@ -4,7 +4,15 @@
   "description": "react-aspnet-core",
   "path": "^0.12.7",
   "main": "src/HelloWorld.js",
-  "dependencies": {},
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
   "devDependencies": {
     "webpack-dev-server": "^3.1.5"
   },
