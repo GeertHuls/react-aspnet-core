@@ -1,32 +1,22 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router } from 'react-router-dom';
 import {Route, Switch} from 'react-router-dom';
+
+import Login from "./Components/common/Login";
+import Speakers from "./Components/speakers/Speakers";
+import Home from "./Components/home/Home";
+import RouteNotFound from "./RouteNotFound";
 
 class Routes extends Component {
     render() {
         return (
-            <Router>
-                <div>
-                    <Switch>
-                        <Route
-                            exact path="/"
-                            render={() => (
-                                <h1>Home page</h1>
-                            )}/>
-
-                        <Route
-                            exact path="/route1"
-                            render={() => (
-                                <h1>This is route 1</h1>
-                            )}/>
-
-                        <Route
-                            render={() => (
-                                <h1>Route not found</h1>
-                            )}/>
-                    </Switch>
-                </div>
-            </Router>
+            <div>
+                <Switch>
+                    <Route exact path="/" component={Home}/>
+                    <Route exact path="/speakers" component={Speakers}/>
+                    <Route exact path="/login" component={Login}/>
+                    <Route render={props => <RouteNotFound action={this.handler}  />}></Route>
+                </Switch>
+            </div>
         );
     }
 }

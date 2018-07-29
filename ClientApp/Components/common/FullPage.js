@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 
 import Routes from "../../Routes";
+import PageTop from "./PageTop";
+import CodeCampMenu from "./CodeCampMenu";
+import Footer from "./Footer";
 
 class FullPage extends Component {
-
     render() {
         return (
             <div>
-                <h2>Page Top</h2>
+                <PageTop>
+                    <CodeCampMenu />
+                </PageTop>
                 <Routes />
+                <Footer />
             </div>
         );
     }
