@@ -2,3 +2,5 @@
 node_modules/
 bundle.js
 bundle.js.map
+clientBundle.js
+clientBundle.js.map

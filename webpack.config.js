@@ -4,6 +4,9 @@ const path = require('path');
 const APP_DIR = path.resolve(__dirname, 'ClientApp');
 const PUBLIC_DIR = path.resolve(__dirname, 'public');
 
+const merge = require('webpack-merge');
+const baseConfig = require('./webpack.base.js');
+
 const config = {
     entry: APP_DIR + '/Client.js',
     devServer: {
@@ -14,24 +17,8 @@ const config = {
 
     output: {
         path: PUBLIC_DIR,
-        filename: 'bundle.js'
-    },
-    devtool: 'source-map',
-    module: {
-        rules: [
-            {
-                test: /\.js?$/,
-                loader: 'babel-loader',
-                exclude: /node_modules/,
-                options: {
-                    presets: [
-                        'react', 'stage-2',
-                        ['env', { targets: { browsers: ['last 2 versions'] } }]
-                    ]
-                }
-            }
-        ]
+        filename: 'clientBundle.js'
     }
 };
 
-module.exports = config;
+module.exports = merge(baseConfig, config);
