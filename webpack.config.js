@@ -1,11 +1,11 @@
 const webpack = require('webpack');
 const path = require('path');
 
-const APP_DIR = path.resolve(__dirname, 'src');
+const APP_DIR = path.resolve(__dirname, 'ClientApp');
 const PUBLIC_DIR = path.resolve(__dirname, 'public');
 
 const config = {
-    entry: APP_DIR + '/HelloWorld.js',
+    entry: APP_DIR + '/Client.js',
     devServer: {
       contentBase: PUBLIC_DIR,
       port: 9000,
