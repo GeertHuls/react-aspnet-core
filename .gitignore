@@ -4,3 +4,5 @@ bundle.js
 bundle.js.map
 clientBundle.js
 clientBundle.js.map
+serverbundle.js
+serverbundle.js.map

@@ -5,7 +5,7 @@ import { browserHistory } from 'react-router';
 
 import FullPage from "./Components/common/FullPage";
 
-ReactDOM.render(
+ReactDOM.hydrate(
     <Router history={browserHistory}>
         <FullPage />
     </Router>,
